@@ -28,11 +28,13 @@ def DockerMenu():
         print("""
             Press 1: To Configure Docker
             Press 2: To Pull Docker Image
-            Press 3: To List Containers
-            Press 4: To Remove All Containers
-            Press 5: To Configure Web Server on Docker
-            Press 6: To Launch GUI Program in Docker
-            Press 7: To Select Another Technology
+            Press 3: To List the Containers
+            Press 4: To List all the Images
+            Press 5: To Remove All Containers
+            Press 6: To Launch a Container
+            Press 7: To Configure Web Server on Docker
+            Press 8: To Launch GUI Program (Firefox) in Docker
+            Press 9: To go back to the Main Menu
             """)
         print("\n")
         os.system('tput setaf 3')
@@ -48,12 +50,20 @@ def DockerMenu():
             os.system('docker ps -a')
             input()
         elif ch == 4:
-            os.system("docker rm -f $(docker ps -aq)")
+            os.system('docker images')
         elif ch == 5:
-            Config_Web()
+            os.system("docker rm -f $(docker ps -aq)")
         elif ch == 6:
-            Docker_GUI()
+            image = input("Enter the Image to pull ")
+			container_name = input("Enter the name of container ")
+			cmd = 'docker run -it --name {} {}'.format(container_name,image)
+			print("Launching the container")
+			os.system(cmd)
         elif ch == 7:
+            Config_Web()
+        elif ch == 8:
+            Docker_GUI()
+        elif ch == 9:
             break
         else:
             print('Enter a valid choice')
