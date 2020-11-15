@@ -1,4 +1,8 @@
 import os 
+
+def RemoteLogin():
+	pass
+
 def Locally():
     while True:
         os.system("clear")
