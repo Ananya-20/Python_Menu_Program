@@ -103,7 +103,7 @@ def AWS_Menu():
             break
         else:
             print("Invalid Choice")
-            print()
+            input("Press Enter to continue ")
 
 
 
