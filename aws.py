@@ -22,7 +22,7 @@ def AWS_Menu():
             """)
         print()
         os.system("tput setaf 3")
-        ch = int(input("Enter your choice:- "))
+        ch = int(input("Enter your choice: "))
         os.system("tput setaf 7")
         if ch == 1:
             print()
@@ -32,7 +32,7 @@ def AWS_Menu():
             os.system("tput setaf 7")
         elif ch == 2:
             os.system("tput setaf 3")
-            KeyName = input("Enter key-pait name: ")
+            KeyName = input("Enter key-pair name: ")
             os.system("tput setaf 7")
             os.system("aws ec2 create-key-pair --keyname {}".format(KeyName))
             os.system("tput setaf 3")
