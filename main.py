@@ -1,8 +1,9 @@
 import os
-form linux import *
-form docker import *
-form hadoop import *
+from linux import *
+from docker import *
+from hadoop import *
 from aws import *
+from ansible import *
 
 while True:
     os.system("clear")
@@ -13,11 +14,11 @@ while True:
     os.system("tput setaf 7")
     os.system("tput setaf 2")
     print("""
-            Press 1: For Linux
-            Press 2: For Docker
-            Press 3: For Hadoop
-            Press 4: For Ansible
-            Press 5: For Amazon Web Services (AWS)
+            Press 1: For OS (Linux) related services
+            Press 2: For Docker related services
+            Press 3: For Hadoop related services
+            Press 4: For Ansible related services 
+            Press 5: For Amazon Web Services (AWS) 
             Press 6: For Exit
             """)
     print("\n")
