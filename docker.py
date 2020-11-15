@@ -31,7 +31,7 @@ def DockerMenu():
             Press 3: To List Containers
             Press 4: To Remove All Containers
             Press 5: To Configure Web Server on Docker
-            Press 6: To Launch GUI Progra in Docker'
+            Press 6: To Launch GUI Program in Docker
             Press 7: To Select Another Technology
             """)
         print("\n")
