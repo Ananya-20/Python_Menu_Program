@@ -24,7 +24,7 @@ def HadoopMenu():
         os.system("ssh {} jps".format(ing))
 		
     elif ch == 2:
-		    print("\nConfiguring Slave Node\n")
+	print("\nConfiguring Slave Node\n")
        	ing=input("Enter Machine IP")
        	os.system("scp jdk-8u171-linux-x64.rpm {}:/".format(ing))
        	os.system("ssh {} rpm -i /jdk-8u171-linux-x64.rpm".format(ing))
