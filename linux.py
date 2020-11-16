@@ -55,16 +55,16 @@ def Locally():
             os.system(f"useradd {user_name};id {user_name}")
         elif ch == 9:
             user_name=input("Enter the username To Delete : ")
-	    os.system(f"userdel {user_name}")
+	        os.system(f"userdel {user_name}")
         elif ch == 10:
             ip = input("Enter IP or Hostname you want to ping : ")
-	    os.system("ping {}".format(ip))
+	        os.system("ping {}".format(ip))
         elif ch == 11:
             software = input("Enter package you want to install ")
-	    os.system(f"yum install {software}")
+	        os.system(f"yum install {software}")
         elif ch == 12:
             soft = input("Enter package you want to uninstall ")
-	    os.system(f"yum remove {soft}")
+	        os.system(f"yum remove {soft}")
         elif ch == 13:
             break
         else:
@@ -81,7 +81,7 @@ def LinuxMenu():
 	print()
 	os.system("tput setaf 7")
 	if login.lower() == "remotely":
-            RemoteLogin()
+        RemoteLogin()
 	    break
 	elif login.lower() == "locally":
 	    Locally()
