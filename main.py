@@ -38,7 +38,7 @@ while True:
     elif ch == 6:
         os.system('clear')
         print("\n")
-        os.system('tput setaf 1")
+        os.system("tput setaf 1")
         print("\t\t\t -------------------")
         print("\t\t\t Thank You !! ")
         print("\t\t\t -------------------")
