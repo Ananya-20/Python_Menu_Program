@@ -28,9 +28,9 @@ def Locally():
             Press 13: Exit
             """)
         ch = int(input("Enter your Choice:"))
+
         if ch == 1:
-		print("Checking the IP...")
-		os.system("ifconfig enp0s3")
+                os.system("ifconfig enp0s3")
         elif ch == 2:
                 os.system("date")
         elif ch == 3:
@@ -54,16 +54,16 @@ def Locally():
                 username = input("Enter a new username ")
                 os.system(f"useradd {user_name};id {user_name}")
         elif ch == 9:
-		user_name=input("Enter the username To Delete : ")
+                user_name=input("Enter the username To Delete : ")
         elif ch == 10:
                 ip = input("Enter IP or Hostname you want to ping : ")
-	        os.system("ping {}".format(ip))
+                os.system("ping {}".format(ip))
         elif ch == 11:
                 software = input("Enter package you want to install ")
-	        os.system(f"yum install {software}")
+                os.system(f"yum install {software}")
         elif ch == 12:
                 soft = input("Enter package you want to uninstall ")
-	        os.system(f"yum remove {soft}")
+                os.system(f"yum remove {soft}")
         elif ch == 13:
                 break
         else:
@@ -73,19 +73,19 @@ def Locally():
 
 def LinuxMenu():
     while True:
-	print()
-	os.system("tput setaf 3")
-	login = input("In which way you want to work: locally/remotely")
-	print(login)
-	print()
-	os.system("tput setaf 7")
-	if login.lower() == "remotely":
-                RemoteLogin()
-	        break
-	elif login.lower() == "locally":
-	        Locally()
-	        break
-	else:
-		print("Enter a valid choice ")
-		input("Press Enter to Continue ")
+            print()
+            os.system("tput setaf 3")
+            login = input("In which way you want to work: locally/remotely")
+            print(login)
+            print()
+            os.system("tput setaf 7")
+            if login.lower() == "remotely":
+                    RemoteLogin()
+                    break
+            elif login.lower() == "locally":
+                    Locally()
+                    break
+            else:
+                    print("Enter a valid choice ")
+                    input("Press Enter to Continue ")
 
