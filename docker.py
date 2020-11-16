@@ -55,10 +55,10 @@ def DockerMenu():
             os.system("docker rm -f $(docker ps -aq)")
         elif ch == 6:
             image = input("Enter the Image to pull ")
-	    container_name = input("Enter the name of container ")
-	    cmd = 'docker run -it --name {} {}'.format(container_name,image)
-	    print("Launching the container")
-	    os.system(cmd)
+            container_name = input("Enter the name of container ")
+            cmd = 'docker run -it --name {} {}'.format(container_name,image)
+            print("Launching the container")
+            os.system(cmd)
         elif ch == 7:
             Config_Web()
         elif ch == 8:
