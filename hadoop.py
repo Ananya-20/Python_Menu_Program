@@ -1,11 +1,11 @@
 import os
 
-print("Welcome To Hadoop...")
-
 def HadoopMenu():
+    print("Welcome To Hadoop...")
     print("""
       Press 1: For Configuring Name(Master) Node
       Press 2: For Configuring Data Node
+      Press 3: To go back to the main menu
       """)
     ch = int(input('Enter your choice'))
     if ch == 1:
