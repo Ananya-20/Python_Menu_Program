@@ -94,7 +94,7 @@ def AWS_Menu():
         elif ch == 9:
             print()
             s3_bucket_name = input("Enter S3 bucket name to delete : ")
-            os.system('aws s3 rm --recursive s3://{}'.format(s3_name))
+            os.system('aws s3 rm --recursive s3://{}'.format(s3_bucket_name))
             os.system('aws s3api delete-bucket --bucket {} --region us-east-1'.format(s3_bucket_name))
             print()
             print('Bucket Deleted Successfully ')
