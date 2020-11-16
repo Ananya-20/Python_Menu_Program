@@ -29,47 +29,46 @@ def Locally():
             """)
         ch = int(input("Enter your Choice:"))
         if ch == 1:
-            print("Checking the IP...")
-            os.system("ifconfig enp0s3")
+		print("Checking the IP...")
+                os.system("ifconfig enp0s3")
         elif ch == 2:
-            os.system("date")
+                os.system("date")
         elif ch == 3:
-            os.system("cal")
+                os.system("cal")
         elif ch == 4:
-            Dir_Nm = input("Enter the name of directory ")
-            os.system("mkdir {}".format(Dir_NM))
-            print("Directory Successfully Created...")
+                Dir_Nm = input("Enter the name of directory ")
+                os.system("mkdir {}".format(Dir_NM))
+                print("Directory Successfully Created...")
         elif ch == 5:
-            File_Nm = input("Enter the name of file ")
-            os.system("touch {}".format(File_Nm))
-            print("File Successfully Created...")
+                File_Nm = input("Enter the name of file ")
+                os.system("touch {}".format(File_Nm))
+                print("File Successfully Created...")
         elif ch == 6:
-            os.system("yum install httpd -y")
-            os.system("cp index.html /var/www/html/index.html") #here index.html is a pre-created webpage in the same directory where this script is running
-            os.system("systemctl start httpd")
-            os.system("systemctl status httpd")
+                os.system("yum install httpd -y")
+                os.system("cp index.html /var/www/html/index.html") #here index.html is a pre-created webpage in the same directory where this script is running
+                os.system("systemctl start httpd")
+                os.system("systemctl status httpd")
         elif ch == 7:
-            os.system("firefox")
+                os.system("firefox")
         elif ch == 8:
-            username = input("Enter a new username ")
-            os.system(f"useradd {user_name};id {user_name}")
+                username = input("Enter a new username ")
+                os.system(f"useradd {user_name};id {user_name}")
         elif ch == 9:
-            user_name=input("Enter the username To Delete : ")
-	    os.system(f"userdel {user_name}")
+		user_name=input("Enter the username To Delete : ")
         elif ch == 10:
-            ip = input("Enter IP or Hostname you want to ping : ")
-	    os.system("ping {}".format(ip))
+                ip = input("Enter IP or Hostname you want to ping : ")
+	        os.system("ping {}".format(ip))
         elif ch == 11:
-            software = input("Enter package you want to install ")
-	    os.system(f"yum install {software}")
+                software = input("Enter package you want to install ")
+	        os.system(f"yum install {software}")
         elif ch == 12:
-            soft = input("Enter package you want to uninstall ")
-	    os.system(f"yum remove {soft}")
+                soft = input("Enter package you want to uninstall ")
+	        os.system(f"yum remove {soft}")
         elif ch == 13:
-            break
+                break
         else:
-            print("Enter a valid choice")
-            input("Press Enter to continue")
+                print("Enter a valid choice")
+                input("Press Enter to continue")
 
 
 def LinuxMenu():
@@ -81,12 +80,12 @@ def LinuxMenu():
 	print()
 	os.system("tput setaf 7")
 	if login.lower() == "remotely":
-            RemoteLogin()
-	    break
+                RemoteLogin()
+	        break
 	elif login.lower() == "locally":
-	    Locally()
-	    break
+	        Locally()
+	        break
 	else:
-	    print("Enter a valid choice ")
-	    input("Press Enter to Continue ")
+		print("Enter a valid choice ")
+		input("Press Enter to Continue ")
 
