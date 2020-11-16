@@ -1,13 +1,18 @@
 import os
 
 def HadoopMenu():
+    os.system("clear")
+    os.system("tput setaf 1")
     print("Welcome To Hadoop...")
+    os.system("tput setaf 2")
     print("""
       Press 1: For Configuring Name(Master) Node
       Press 2: For Configuring Data Node
       Press 3: To go back to the main menu
       """)
+    os.system("tput setaf 3")
     ch = int(input('Enter your choice'))
+    os.system("tput setaf 7")
     if ch == 1:
         print("\nconfiguring Master Node\n")	       
         ing=input("Enter Machine IP")
