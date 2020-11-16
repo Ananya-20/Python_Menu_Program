@@ -30,7 +30,7 @@ def Locally():
         ch = int(input("Enter your Choice:"))
         if ch == 1:
 		print("Checking the IP...")
-                os.system("ifconfig enp0s3")
+		os.system("ifconfig enp0s3")
         elif ch == 2:
                 os.system("date")
         elif ch == 3:
